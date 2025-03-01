@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: rSize(1),
     borderColor: Colors.christmasSilver,
     gap: rSize(16),
+    backgroundColor: Colors.white,
   },
   title: {
     flex: 1,

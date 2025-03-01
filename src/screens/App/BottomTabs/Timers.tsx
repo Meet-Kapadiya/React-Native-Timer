@@ -126,11 +126,6 @@ const Timers = () => {
 
       return (
         <Category
-          style={
-            index === progress?.length - 1 &&
-            !expanded?.[section?.title] &&
-            styles.noBottomBorder
-          }
           name={section?.title}
           index={index}
           selected={
@@ -163,11 +158,6 @@ const Timers = () => {
 
       return (
         <TimerComponent
-          style={
-            categoryIndex === progress?.length - 1 &&
-            index === progress?.[categoryIndex]?.timers?.length - 1 &&
-            styles.noBottomBorder
-          }
           timer={item}
           timerIndex={index}
           categoryIndex={categoryIndex}
@@ -255,11 +245,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: rSize(20),
   },
   listCont: {
-    paddingVertical: rSize(16),
-  },
-  noBottomBorder: {
-    borderBottomWidth: 0,
-    borderColor: 'transparent',
+    paddingTop: rSize(16),
+    paddingBottom: rSize(64),
   },
   dropdownSearch: {
     borderRadius: rSize(8),

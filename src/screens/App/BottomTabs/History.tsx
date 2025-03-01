@@ -227,6 +227,7 @@ const styles = StyleSheet.create({
     height: rSize(24),
   },
   listCont: {
-    paddingVertical: rSize(16),
+    paddingTop: rSize(16),
+    paddingBottom: rSize(64),
   },
 });
