@@ -18,6 +18,7 @@ interface CategoryProps {
   index?: number;
   running?: boolean;
   expanded: boolean;
+  selected?: boolean;
   isHistory?: boolean;
   isCompleted?: boolean;
   style?: StyleProp<ViewStyle>;
@@ -30,6 +31,7 @@ const Category = (props: CategoryProps) => {
     name,
     running,
     expanded,
+    selected,
     index,
     isHistory,
     isCompleted,
@@ -72,7 +74,7 @@ const Category = (props: CategoryProps) => {
     });
   }, [setProgress, index]);
 
-  return (
+  return selected ? (
     <Pressable
       style={[styles.category, style]}
       onPress={toggleExpand?.bind(null, name)}>
@@ -103,7 +105,7 @@ const Category = (props: CategoryProps) => {
         resizeMode="contain"
       />
     </Pressable>
-  );
+  ) : null;
 };
 
 export default memo(Category);

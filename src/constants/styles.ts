@@ -10,9 +10,4 @@ export const GlobalStyle = StyleSheet.create({
   transparent: {
     backgroundColor: 'transparent',
   },
-  center: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
 });
